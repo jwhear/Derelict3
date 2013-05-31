@@ -305,8 +305,8 @@ struct GLFWvidmode
     int width;
     int height;
     int redBits;
-    int blueBits;
     int greenBits;
+    int blueBits;
 	int refreshRate;
 }
 
