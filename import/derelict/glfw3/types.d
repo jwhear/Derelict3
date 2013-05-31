@@ -37,8 +37,7 @@ enum
 enum
 {
     GLFW_RELEASE = 0,
-    GLFW_PRESS = 1,
-    GLFW_REPEAT = 2,
+    GLFW_PRESS = 1
 }
 
 enum
@@ -180,11 +179,6 @@ enum
     GLFW_KEY_RALT          = GLFW_KEY_RIGHT_ALT,
     GLFW_KEY_RSUPER        = GLFW_KEY_RIGHT_SUPER,
 
-    GLFW_MOD_SHIFT = 0x0001,
-    GLFW_MOD_CONTROL = 0x0002,
-    GLFW_MOD_ALT = 0x0004,
-    GLFW_MOD_SUPER = 0x0008,
-
     GLFW_MOUSE_BUTTON_1     = 0,
     GLFW_MOUSE_BUTTON_2     = 1,
     GLFW_MOUSE_BUTTON_3     = 2,
@@ -219,7 +213,6 @@ enum
 
 enum
 {
-
     GLFW_NOT_INITIALIZED      = 0x00010001,
     GLFW_NO_CURRENT_CONTEXT   = 0x00010002,
     GLFW_INVALID_ENUM         = 0x00010003,
@@ -236,51 +229,52 @@ enum
     GLFW_VISIBLE              = 0x00020004,
     GLFW_DECORATED            = 0x00020005,
 
-    GLFW_CONTEXT_REVISION       = 0x00021001,
-    GLFW_RED_BITS               = 0x00021002,
-    GLFW_GREEN_BITS             = 0x00021003,
-    GLFW_BLUE_BITS              = 0x00021004,
-    GLFW_ALPHA_BITS             = 0x00021005,
-    GLFW_DEPTH_BITS             = 0x00021006,
-    GLFW_STENCIL_BITS           = 0x00021007,
-    GLFW_ACCUM_RED_BITS         = 0x00021008,
-    GLFW_ACCUM_GREEN_BITS       = 0x00021009,
-    GLFW_ACCUM_BLUE_BITS        = 0x0002100A,
-    GLFW_ACCUM_ALPHA_BITS       = 0x0002100B,
-    GLFW_AUX_BUFFERS            = 0x0002100C,
-    GLFW_STEREO                 = 0x0002100D,
-    GLFW_SAMPLES                = 0x0002100E,
-    GLFW_SRGB_CAPABLE           = 0x0002100F,
+    GLFW_RED_BITS             = 0x00021001,
+    GLFW_GREEN_BITS           = 0x00021002,
+    GLFW_BLUE_BITS            = 0x00021003,
+    GLFW_ALPHA_BITS           = 0x00021004,
+    GLFW_DEPTH_BITS           = 0x00021005,
+    GLFW_STENCIL_BITS         = 0x00021006,
+    GLFW_ACCUM_RED_BITS       = 0x00021007,
+    GLFW_ACCUM_GREEN_BITS     = 0x00021008,
+    GLFW_ACCUM_BLUE_BITS      = 0x00021009,
+    GLFW_ACCUM_ALPHA_BITS     = 0x0002100A,
+    GLFW_AUX_BUFFERS          = 0x0002100B,
+    GLFW_STEREO               = 0x0002100C,
+    GLFW_SAMPLES              = 0x0002100D,
+    GLFW_SRGB_CAPABLE         = 0x0002100E,
+	GLFW_REFRESH_RATE         = 0x0002100F,
 
-    GLFW_CLIENT_API           = 0x00022000,
-    GLFW_CONTEXT_VERSION_MAJOR = 0x00022001,
-    GLFW_CONTEXT_VERSION_MINOR = 0x00022002,
-    GLFW_CONTEXT_ROBUSTNESS   = 0x00022003,
-    GLFW_OPENGL_FORWARD_COMPAT = 0x00022004,
-    GLFW_OPENGL_DEBUG_CONTEXT = 0x00022005,
-    GLFW_OPENGL_PROFILE       = 0x00022006,
+    GLFW_CLIENT_API           = 0x00022001,
+    GLFW_CONTEXT_VERSION_MAJOR = 0x00022002,
+    GLFW_CONTEXT_VERSION_MINOR = 0x00022003,
+    GLFW_CONTEXT_REVISION     = 0x00022004,
+    GLFW_CONTEXT_ROBUSTNESS   = 0x00022005,
+    GLFW_OPENGL_FORWARD_COMPAT = 0x00022006,
+    GLFW_OPENGL_DEBUG_CONTEXT = 0x00022007,
+    GLFW_OPENGL_PROFILE       = 0x00022008,
 
-    GLFW_OPENGL_API             = 0x00030001,
-    GLFW_OPENGL_ES_API          = 0x00030002,
+    GLFW_OPENGL_API           = 0x00030001,
+    GLFW_OPENGL_ES_API        = 0x00030002,
 
-    GLFW_NO_ROBUSTNESS                   = 0,
-    GLFW_NO_RESET_NOTIFICATION  = 0x00031001,
-    GLFW_LOSE_CONTEXT_ON_RESET  = 0x00031002,
+    GLFW_NO_ROBUSTNESS         = 0x00000000,
+    GLFW_NO_RESET_NOTIFICATION = 0x00031001,
+    GLFW_LOSE_CONTEXT_ON_RESET = 0x00031002,
 
-    GLFW_OPENGL_NO_PROFILE               = 0,
-    GLFW_OPENGL_CORE_PROFILE    = 0x00032001,
-    GLFW_OPENGL_COMPAT_PROFILE  = 0x00032002,
+    GLFW_OPENGL_NO_PROFILE    = 0x00000000,
+    GLFW_OPENGL_CORE_PROFILE  = 0x00032001,
+    GLFW_OPENGL_COMPAT_PROFILE = 0x00032002,
 
-    GLFW_CURSOR                 = 0x00033001,
-    GLFW_STICKY_KEYS            = 0x00033002,
-    GLFW_STICKY_MOUSE_BUTTONS   = 0x00033003,
+    GLFW_CURSOR_MODE          = 0x00033001,
+    GLFW_STICKY_KEYS          = 0x00033002,
+    GLFW_STICKY_MOUSE_BUTTONS = 0x00033003,
 
-    GLFW_CURSOR_NORMAL          = 0x00034001,
-    GLFW_CURSOR_HIDDEN          = 0x00034002,
-    GLFW_CURSOR_DISABLED        = 0x00034003,
+    GLFW_CURSOR_NORMAL       = 0x00034001,
+    GLFW_CURSOR_HIDDEN       = 0x00034002,
+    GLFW_CURSOR_CAPTURED     = 0x00034003,
 
-    GLFW_CONNECTED              = 0x00040001,
-    GLFW_DISCONNECTED           = 0x00040002,
+    GLFW_CONNECTED           = 0x00040001,
+    GLFW_DISCONNECTED         = 0x00040002,
 }
 
 extern(C) alias void function() GLFWglproc;
@@ -297,13 +291,13 @@ extern(C)
     alias void function(GLFWwindow*) GLFWwindowrefreshfun;
     alias void function(GLFWwindow*, int) GLFWwindowfocusfun;
     alias void function(GLFWwindow*, int) GLFWwindowiconifyfun;
-    alias void function(GLFWwindow*, int, int, int) GLFWmousebuttonfun;
+    alias void function(GLFWwindow*, int, int) GLFWmousebuttonfun;
     alias void function(GLFWwindow*, double, double) GLFWcursorposfun;
     alias void function(GLFWwindow*, int) GLFWcursorenterfun;
     alias void function(GLFWwindow*, double, double) GLFWscrollfun;
-    alias void function(GLFWwindow*, int, int, int) GLFWkeyfun;
-    alias void function(GLFWwindow*, uint) GLFWcharfun;
-    alias void function(GLFWmonitor*, int) GLFWmonitorfun;
+    alias void function(GLFWwindow*, int, int) GLFWkeyfun;
+    alias void function(GLFWwindow*, int) GLFWcharfun;
+    alias void function(GLFWmonitor*) GLFWmonitorfun;
 }
 
 struct GLFWvidmode
@@ -311,14 +305,14 @@ struct GLFWvidmode
     int width;
     int height;
     int redBits;
-    int greenBits;
     int blueBits;
+    int greenBits;
+	int refreshRate;
 }
 
 struct GLFWgammaramp
 {
-    ushort* red;
-    ushort* green;
-    ushort* blue;
-    uint size;
+    ushort[GLFW_GAMMA_RAMP_SIZE] red;
+    ushort[GLFW_GAMMA_RAMP_SIZE] green;
+    ushort[GLFW_GAMMA_RAMP_SIZE] blue;
 }
